@@ -1,0 +1,56 @@
+====================Ansible @ master@root user===========================
+
+
+    1   yum install ansible -y
+    2  sudo amazon-linux-extras install ansible2
+    3  useradd ansible
+    4  passwd ansible
+    5  vi /etc/ssh/sshd_config
+    6  systemctl restart sshd
+    7  systemctl status sshd
+    8  visudo
+    9  su - ansible
+   10  history
+   
+   
+   --=====================master@ansible user======================
+   
+    1  ssh-keygen
+    2  ssh-copy-id ansible@172.31.40.125
+    3  sudo vi /etc/ansible/hosts
+    4  ansible -m ping 172.31.40.125
+    5  ansible -m command -a "uptime" all
+    6  history
+    
+    ===================worker node@root user=================
+    
+    
+    
+    1  useradd ansible
+    2  passwd ansible
+    3  useradd ansible
+    4  passwd ansible
+    5  vi /etc/ssh/sshd_config
+    6  systemctl restart sshd
+    7  systemctl status sshd
+    8  hostname -I
+    9  visudo
+   10  history
+   
+   
+   =================================================================
+   for ip addrss show
+   
+   1) hostname -I
+   2) ip addr show
+   =====================================================================
+   ================Ansible ad hoc=====================================
+   
+   
+   
+   
+   
+   
+   
+   
+   
