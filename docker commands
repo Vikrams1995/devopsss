@@ -1,0 +1,38 @@
+  =====================docker in root===========
+    1  yum install docker -y
+    2  systemctl start docker
+    3  docker run -itd --name test -p 6060:80 nginx
+    4  docker container ls
+    5  wget https://www.free-css.com/assets/files/free-css-templates/download/page259/vanilla.zip
+    6  ls
+    7  docker ls -a
+    8  docker ps -a
+    9  ls
+   10  docker cp vanilla.zip d30672d639ed:/usr/share/nginx/html
+   11  docker exec d30672d639ed /bin/bash
+   12  docker exec -it d30672d639ed /bin/bash
+   13  docker pull vivekyoganand/nginxbebusy
+   14  docker pull vivekyoganand/nginxbebusy:latest
+   15  docker pull vivekyoganand/nginxbebusy:firsttry
+   16  docker run -itd --name sample -p 7070:80 vivekyoganand/nginxbebusy
+   17  docker run -itd --name sample -p 7070:80 vivekyoganand/nginxbebusy:firsttry
+   18  docker ls
+   19  docker ps -a
+   20  docker exec d30672d639ed /bin/bash
+   21  history
+   
+ ======================docker in container===================
+ 
+   1  cd /usr/share/nginx/html
+    2  ls
+    3  rm -rf index.html 50x.html
+    4  ls
+    5  apt update -y
+    6  apt install unzip -y
+    7  ls
+    8  unzip vanilla.zip
+    9  ls
+   10  ls -lrt
+   11  rm vanilla.zip
+   12  ls
+   13  exit
